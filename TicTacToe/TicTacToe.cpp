@@ -104,14 +104,14 @@ void ticTacToe(std::vector<Players>& vec, std::string file)
                     }
                 }
             }
-            if (!p1Done && !p2Done)
+        }
+        if (!p1Done && !p2Done)
+        {
+            for (auto& it : vec)
             {
-                for (auto& it : vec)
+                if (it.sign == p1 || it.sign == p2)
                 {
-                    if (it.sign == p1 || it.sign == p2)
-                    {
-                        it.draws++;
-                    }
+                    it.draws++;
                 }
             }
         }
